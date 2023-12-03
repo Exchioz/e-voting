@@ -38,7 +38,7 @@
                                     <!-- Password input -->
                                     <div class="form-floating mb-4">
                                         <input type="text" class="form-control" id="password" placeholder="Enter Password" name="password" required>
-                                        <label for="password"> Password </label>
+                                        <label for="password"> Token </label>
                                     </div>
 
                                     <!-- Submit button -->
