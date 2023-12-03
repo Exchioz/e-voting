@@ -20,36 +20,40 @@ if (!isset($_SESSION['nim'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">Hello,
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="services/action-logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse position-absolute top-50 start-50 translate-middle" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact.php">Contact Us</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-
+        <a class="navbar-brand font" href="#">
+            Halo, Peserta!
+        </a>
+        <a class="btn btn-danger text-white" href="services/action-logout.php" role="button">Logout</a>
+    </div>
+</nav>
 
     <section id="landing-page" class="min-vh-100">
         <div class="main-hero">
             <div class="intro-text">
                 <div class="container">
-                    <div class="heading" data-aos="fade-up">
+                    <div class="heading text-white" data-aos="fade-up">
                         <h1>Another cool free template by the fine folks at colorlib</h1>
                     </div>
-                    <div class="excerpt text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="excerpt text-center text-white" data-aos="fade-up" data-aos-delay="100">
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live.</p>
                     </div>
                     <div class="align-items-center justify-content-center d-flex">
-                        <button class="btn btn-primary" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
+                        <button class="btn btn-light btn-lg fw-bold mt-4" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
                     </div>
                 </div>
             </div>
