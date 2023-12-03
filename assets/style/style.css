@@ -133,3 +133,19 @@
 .card .more a {
 	color: black;
 }
+
+
+.cardview {
+  border: none;
+	position: relative;
+	width: 380px;
+	height: auto;
+	background: rgba(255, 255, 255, 0.05);
+	margin-top: 5px;
+  margin-bottom: 5px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
