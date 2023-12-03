@@ -17,9 +17,8 @@
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
                     <div class="col-lg-6 mb-5 mb-lg-0">
-                        <img src="asset/asset-login.png" alt="Your Image Alt Text" class="img-fluid rounded" style="width: auto; height: auto;">
+                        <img src="assets/img/asset-login.png" alt="Your Image Alt Text" class="img-fluid rounded" style="width: auto; height: auto;">
                     </div>
-
                     <div class="col-lg-6">
                         <div class="card bg-light">
                             <div class="card-body py-5 px-md-5">
@@ -29,17 +28,17 @@
                                         <span class="text-primary">Selamat Datang!</span>
                                     </h3>
                                 </div>
-                                <form action="action/action-login.php" method="POST">
-                                    <!-- Email input -->
+                                <form action="services/action-login.php" method="POST">
+                                    <!-- NIM input -->
                                     <div class="form-floating mt-4 mb-4">
-                                        <input type="text" class="form-control" id="email" placeholder="Enter EmailId" name="email" required>
-                                        <label for="ei"> Email</label>
+                                        <input type="number" class="form-control" id="nim" placeholder="Enter NIM" name="nim" required>
+                                        <label for="nim"> NIM</label>
                                     </div>
 
-                                    <!-- Token input -->
+                                    <!-- Password input -->
                                     <div class="form-floating mb-4">
-                                        <input type="text" class="form-control" id="token" placeholder="Enter Token" name="token" required>
-                                        <label for="token"> Token </label>
+                                        <input type="text" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+                                        <label for="password"> Password </label>
                                     </div>
 
                                     <!-- Submit button -->
