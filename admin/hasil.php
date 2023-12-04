@@ -41,7 +41,7 @@ include("../services/koneksi.php");
     <section id="pemilihan" class="d-flex justify-content-center align-items-center min-vh-100">
         <div class="container">
             <div class="justify-content-center text-center">
-                <h2 class="mb-5">Hasil Suara</h2>
+                <h2 class="mb-5">Quick Count</h2>
             </div>
             <div class="row gutter-v1">
                 <?php

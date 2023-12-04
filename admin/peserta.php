@@ -13,7 +13,7 @@ include "../services/koneksi.php";
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@ include "../services/koneksi.php";
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-body m-3">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">Tambah</button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahModal">Tambah</button>
 
                             <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -72,7 +72,7 @@ include "../services/koneksi.php";
                                                     <label for="addEmail" class="form-label">Email</label>
                                                     <input type="mail" class="form-control" id="addEmail" name="addEmail" required>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                                <button type="submit" class="btn btn-success">Tambah</button>
                                             </form>
                                         </div>
                                     </div>
@@ -101,8 +101,10 @@ include "../services/koneksi.php";
                                                     <td class="text-center"><?php echo $no++; ?></td>
                                                     <td><?php echo $row["pese_nama"]; ?></td>
                                                     <td class="text-center">
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['pese_id']; ?>">Edit</button>
-                                                        <a href='../services/peserta/action-delete.php?id=<?php echo $row['pese_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
+                                                        <div style="display: flex; align-items: center;">
+                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['pese_id']; ?>">Edit</button>
+                                                            <a href='../services/peserta/action-delete.php?id=<?php echo $row['pese_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <div class="modal fade" id="editModal<?php echo $row['pese_id']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">

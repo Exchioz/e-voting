@@ -45,7 +45,7 @@ include "../services/koneksi.php";
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-body m-3">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">Tambah</button>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahModal">Tambah</button>
 
                             <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -72,7 +72,7 @@ include "../services/koneksi.php";
                                                     <label for="addMisi" class="form-label">Misi</label>
                                                     <textarea class="form-control" id="addMisi" name="addMisi" rows="6" required></textarea>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                                <button type="submit" class="btn btn-success">Tambah</button>
                                             </form>
                                         </div>
                                     </div>
@@ -101,10 +101,13 @@ include "../services/koneksi.php";
                                                     <td class="text-center"><?php echo $row["calo_id"]; ?></td>
                                                     <td><?php echo $row["calo_nama"]; ?></td>
                                                     <td class="text-center">
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['calo_id']; ?>">Edit</button>
-                                                        <a href='../services/calon/action-delete.php?id=<?php echo $row['calo_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
+                                                        <div style="display: flex; align-items: center;">
+                                                            <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['calo_id']; ?>">Editt</button>
+                                                            <a href='../services/calon/action-delete.php?id=<?php echo $row['calo_id']; ?>' class='btn btn-danger'>Hapus</a>
+                                                        </div>
                                                     </td>
                                                 </tr>
+
                                                 <div class="modal fade" id="editModal<?php echo $row['calo_id']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
