@@ -46,7 +46,7 @@ include "../services/koneksi.php";
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="addForm" method="POST" action="../services/calon/action-tambah.php">
+                                            <form id="addForm" method="POST" action="../services/action-tambah-calon.php">
                                                 <div class="mb-3">
                                                     <label for="addNoUrut" class="form-label">No. Urut</label>
                                                     <input type="number" class="form-control" id="addNoUrut" name="addNoUrut" required>
@@ -93,7 +93,7 @@ include "../services/koneksi.php";
                                                     <td><?php echo $row["calo_nama"]; ?></td>
                                                     <td class="text-center">
                                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['calo_id']; ?>">Edit</button>
-                                                        <a href='../services/calon/action-delete.php?id=<?php echo $row['calo_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
+                                                        <a href='../services/action-delete.php?calo_id=<?php echo $row['calo_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
                                                     </td>
                                                 </tr>
                                                 <div class="modal fade" id="editModal<?php echo $row['calo_id']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -104,7 +104,7 @@ include "../services/koneksi.php";
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form id="editForm" method="POST" action="../services/calon/action-edit.php">
+                                                                <form id="editForm" method="POST" action="../services/action-edit.php?calo_id=<?php echo $row['calo_id']; ?>">
                                                                     <div class="mb-3">
                                                                         <label for="editNoUrut" class="form-label">No. Urut</label>
                                                                         <input type="number" class="form-control" id="editNoUrut" name="editNoUrut" value="<?php echo $row['calo_id']; ?>" required>

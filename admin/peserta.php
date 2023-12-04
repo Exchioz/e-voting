@@ -9,6 +9,7 @@ include "../services/koneksi.php";
     <title>Daftar Peserta</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
@@ -36,6 +37,7 @@ include "../services/koneksi.php";
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-body m-3">
+                            <a type="button" href="../services/action-sendemail.php" class="btn btn-primary">Send Email</a>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">Tambah</button>
 
                             <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
@@ -46,7 +48,7 @@ include "../services/koneksi.php";
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="addForm" method="POST" action="../services/peserta/action-tambah.php">
+                                            <form id="addForm" method="POST" action="../services/action-tambah-peserta.php">
                                                 <div class="mb-3">
                                                     <label for="addNIM" class="form-label">NIM</label>
                                                     <input type="number" class="form-control" id="addNIM" name="addNIM" required>
@@ -70,7 +72,7 @@ include "../services/koneksi.php";
                                 </div>
                             </div>
                             <div class="table-responsive mt-3">
-                                <table class="table">
+                                <table class="table table-striped" id="tableview" style="width: 100%;">
                                     <thead>
                                         <tr>
                                             <th class="text-center">No. Urut</th>
@@ -92,8 +94,9 @@ include "../services/koneksi.php";
                                                     <td class="text-center"><?php echo $no++; ?></td>
                                                     <td><?php echo $row["pese_nama"]; ?></td>
                                                     <td class="text-center">
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['pese_id']; ?>">Edit</button>
-                                                        <a href='../services/peserta/action-delete.php?id=<?php echo $row['pese_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
+                                                        <a href='../services/action-sendemail.php?pese_id=<?php echo $row['pese_id']; ?>' class='btn btn-success mx-1'>Send</a>
+                                                        <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['pese_id']; ?>">Edit</button>
+                                                        <a href='../services/action-delete.php?pese_id=<?php echo $row['pese_id']; ?>' class='btn btn-danger mx-1'>Hapus</a>
                                                     </td>
                                                 </tr>
                                                 <div class="modal fade" id="editModal<?php echo $row['pese_id']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -104,8 +107,7 @@ include "../services/koneksi.php";
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form id="editForm" method="POST" action="../services/peserta/action-edit.php">
-                                                                    <!-- <input type="hidden" name="pese_id" value="<?php echo $pese_id; ?>"> -->
+                                                                <form id="editForm" method="POST" action="../services/action-edit.php?pese_id=<?php echo $row['pese_id']; ?>">
                                                                     <input type="hidden" id="pese_id" name="pese_id" value="<?php echo $row['pese_id']; ?>" required>
                                                                     <div class="mb-3">
                                                                         <label for="editNIM" class="form-label">NIM</label>
@@ -145,7 +147,13 @@ include "../services/koneksi.php";
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        new DataTable('#tableview');
+    </script>
 </body>
 
 </html>

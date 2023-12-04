@@ -12,8 +12,15 @@ require 'mailer/src/SMTP.php';
 
 include 'koneksi.php';
 
-$sql = "SELECT * FROM peserta WHERE pese_id = 9999";
+if (isset($_GET['id'])) {
+    $pese_id = $_GET['id'];
+    $sql = "SELECT * FROM peserta WHERE pese_id = $pese_id";
+} else {
+    $sql = "SELECT * FROM peserta";
+}
+
 $result = $conn->query($sql);
+
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 
@@ -23,13 +30,13 @@ if ($result->num_rows > 0) {
         $passsmtp    = "8n;gSFnbm;]0";
         $emailnotif  = $row['pese_email'];
         $judulemail  = "Token dari Evoting Pemilihan Ketua Angkatan";
-        $descemail   = "Halo ".$row['pese_nama']." tolong isi data ini di website evoting ya! <br>
+        $descemail   = "Halo " . $row['pese_nama'] . " tolong isi data ini di website evoting ya! <br>
         Terimakasih telah melihat pesan ini.<br><br> 
 
-        NIM:".$row['pese_nim']."<br>
-        Token:".$row['pese_token']."<br><br>
+        NIM:" . $row['pese_nim'] . "<br>
+        Token:" . $row['pese_token'] . "<br><br>
         
-        Token semuanya lowercase ya :3<br><br>
+        Token semuanya lowercase ya :3<br>
         
         Pesan ini bersifat otomatis mohon untuk tidak dibalas.<br>
         Terimakasih ^_^ <br>
@@ -66,4 +73,3 @@ if ($result->num_rows > 0) {
 } else {
     echo "tidak ada calon!";
 }
-?>
