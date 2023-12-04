@@ -71,11 +71,11 @@ include "../services/koneksi.php";
                                     </div>
                                 </div>
                             </div>
-                            <div class="table-responsive mt-3">
+                            <div class="table mt-3">
                                 <table class="table table-striped" id="tableview" style="width: 100%;">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">No. Urut</th>
+                                            <th class="text-center">No.</th>
                                             <th class="text-center" style="width: 450px;">Nama</th>
                                             <th class="text-center">Action</th>
                                         </tr>

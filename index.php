@@ -1,57 +1,9 @@
 <?php
-session_start();
-
-include 'services/koneksi.php';
-if (!isset($_SESSION['nim'])) {
-    header("Location: login.php");
-    exit;
-}
+require_once "header.php";
+require_once "navbar.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style/style.css">
-</head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse position-absolute top-50 start-50 translate-middle" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="about.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contact.php">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <?php
-            $nim = $_SESSION['nim'];
-            $sql = "SELECT pese_nama FROM peserta WHERE pese_nim = '$nim'";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $nama = $row['pese_nama'];
-            }
-            ?>
-            <a class="navbar-brand font" href="#">
-                Halo, <?php echo $nama; ?>
-            </a>
-            <a class="btn btn-danger text-white" href="services/action-logout.php" role="button">Logout</a>
-        </div>
-    </nav>
-
     <section id="landing-page" class="min-vh-100">
         <div class="main-hero">
             <div class="intro-text">
@@ -63,7 +15,7 @@ if (!isset($_SESSION['nim'])) {
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live.</p>
                     </div>
                     <div class="align-items-center justify-content-center d-flex">
-                        <button class="btn btn-light btn-lg fw-bold mt-4" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
+                        <button class="btn btn-outline-light btn-lg fw-bold mt-4" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
                     </div>
                 </div>
             </div>
@@ -133,7 +85,7 @@ if (!isset($_SESSION['nim'])) {
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                 ?>
-                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center my-4">
                             <div class="card h-100 d-flex flex-column justify-content-between">
                                 <div class="image-container text-center">
                                     <img src="./assets/img/<?php echo $row['calo_gambar'] ?>" alt="Image" class="rounded-top img-fluid">
@@ -230,7 +182,6 @@ if (!isset($_SESSION['nim'])) {
     <script src="assets/script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-
-</html>
+<?php require_once "footer.php"; ?>
 
 </html>

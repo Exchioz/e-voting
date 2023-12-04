@@ -37,13 +37,13 @@
 
                                     <!-- Password input -->
                                     <div class="form-floating mb-4">
-                                        <input type="text" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
                                         <label for="password"> Token </label>
                                     </div>
 
                                     <!-- Submit button -->
-                                    <div class="d-grid gap-2 col-6 mx-auto mt-5">
-                                        <button class="btn btn-primary" type="submit" name="submit">Login</button>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary btn-lg" type="submit" name="submit">Login</button>
                                     </div>
                                 </form>
                             </div>

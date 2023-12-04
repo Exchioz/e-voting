@@ -63,6 +63,10 @@ include "../services/koneksi.php";
                                                     <label for="addMisi" class="form-label">Misi</label>
                                                     <textarea class="form-control" id="addMisi" name="addMisi" rows="6" required></textarea>
                                                 </div>
+                                                <div class="mb-3">
+                                                    <label for="addImage" class="form-label">Image</label>
+                                                    <input type="file" class="form-control" id="addImage" name="addImage" accept="image/png, image/gif, image/jpeg" required>
+                                                </div>
                                                 <button type="submit" class="btn btn-primary">Tambah</button>
                                             </form>
                                         </div>
