@@ -12,8 +12,11 @@ switch ($page) {
     case 'peserta':
         $content = 'peserta.php';
         break;
-    case 'user':
-        $content = 'user.php';
+    case 'calon':
+        $content = 'calon.php';
+        break;
+    case 'hasil':
+        $content = 'hasil.php';
         break;
     default:
         $content = '404.php'; // Halaman tidak ditemukan
