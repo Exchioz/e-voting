@@ -2,4 +2,7 @@
 Tugas Akhir Pemrograman Web
 
 # Backend
--- Login Admin
+-- Update TODO LIST
+--- Login
+--- Session
+--- Upload Image Calon
