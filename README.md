@@ -1,8 +1,7 @@
 # e-voting
 Tugas Akhir Pemrograman Web
 
-# Backend
--- Update TODO LIST
--- Login
--- Session
--- Upload Image Calon
+# Update TODO LIST
+- Login
+- Session
+- Upload Image Calon
