@@ -7,22 +7,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $calo_nama = $_POST['addNama'];
     $calo_visi = $_POST['addVisi'];
     $calo_misi = $_POST['addMisi'];
-    $calo_gambar = $_POST['addImage'];
 
-    $query = "INSERT INTO calon (calo_id, calo_nama, calo_visi, calo_misi, calo_gambar) VALUES ('$calo_id', '$calo_nama', '$calo_visi', '$calo_misi', '$calo_gambar')";
-    $result = $conn->query($query);
-
+    // Folder tempat menyimpan file gambar
     $uploadDir = "../assets/img/";
 
-    $uploadedFile = $_FILES["addImage"]["tmp_name"];
+    // Mendapatkan nama file
     $fileName = basename($_FILES["addImage"]["name"]);
-    $uploadPath = $uploadDir . $fileName;
-    move_uploaded_file($uploadedFile, $uploadPath);
 
-    if ($result) {
-        header("Location: ../../admin/index.php?page=calon&status=success");
+    // Menyusun path tempat file akan disimpan
+    $uploadPath = $uploadDir . $fileName;
+
+    // Memindahkan file yang di-upload ke folder tujuan
+    if(move_uploaded_file($_FILES["addImage"]["tmp_name"], $uploadPath)) {
+        // Menyusun query untuk memasukkan data ke dalam database
+        $query = "INSERT INTO calon (calo_id, calo_nama, calo_visi, calo_misi, calo_gambar) VALUES ('$calo_id', '$calo_nama', '$calo_visi', '$calo_misi', '$fileName')";
+        
+        $result = $conn->query($query);
+
+        if ($result) {
+            header("Location: ../admin/index.php?page=calon&status=success");
+        } else {
+            echo "Error: " . $conn->error;
+        }
     } else {
-        echo "Error: " . $conn->error;
+        echo "File upload error.";
     }
 }
 $conn->close();
+?>

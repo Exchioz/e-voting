@@ -23,7 +23,8 @@ include "../services/koneksi.php";
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form id="addForm" method="POST" action="../services/action-tambah-calon.php">
+                                    <form id="addForm" method="POST" action="../services/action-tambah-calon.php"
+                                        enctype="multipart/form-data">
                                         <div class="mb-3">
                                             <label for="addNoUrut" class="form-label">No. Urut</label>
                                             <input type="number" class="form-control" id="addNoUrut" name="addNoUrut"
@@ -101,7 +102,7 @@ include "../services/koneksi.php";
                                                     </div>
                                                     <div class="modal-body">
                                                         <form id="editForm" method="POST"
-                                                            action="../services/action-edit.php?calo_id=<?php echo $row['calo_id']; ?>">
+                                                            action="../services/action-edit.php?calo_id=<?php echo $row['calo_id']; ?>" enctype="multipart/form-data">
                                                             <div class="mb-3">
                                                                 <label for="editNoUrut" class="form-label">No. Urut</label>
                                                                 <input type="number" class="form-control" id="editNoUrut"
@@ -125,6 +126,12 @@ include "../services/koneksi.php";
                                                                 <textarea class="form-control" id="editMisi" name="editMisi"
                                                                     rows="6"
                                                                     required><?php echo $row['calo_misi']; ?></textarea>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="addImage" class="form-label">Image</label>
+                                                                <input type="file" class="form-control" id="editImage"
+                                                                    name="editImage" accept="image/png, image/gif, image/jpeg"
+                                                                    required>
                                                             </div>
                                                             <button type="submit" class="btn btn-primary">Update</button>
                                                         </form>

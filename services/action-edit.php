@@ -22,8 +22,27 @@ if (isset($_GET['pese_id'])) {
     $calo_visi = $_POST['editVisi'];
     $calo_misi = $_POST['editMisi'];
 
-    $sql = "UPDATE calon SET calo_id='$calo_id', calo_nama='$calo_nama', calo_visi='$calo_visi', calo_misi='$calo_misi' WHERE calo_id=$calo_id";
+    // Direktori tempat file akan disimpan
+    $uploadDir = "../assets/img/";
+    $fileName = basename($_FILES["editImage"]["name"]);
+    $uploadPath = $uploadDir . $fileName;
 
+    // Cek apakah file gambar diupload
+    if ($_FILES['editImage']['error'] == 0) {
+        // Pindahkan file ke direktori yang dituju
+        if(move_uploaded_file($_FILES["editImage"]["tmp_name"], $uploadPath)) {
+            // File berhasil diupload, perbarui database dengan nama file baru
+            $sql = "UPDATE calon SET calo_nama='$calo_nama', calo_visi='$calo_visi', calo_misi='$calo_misi', calo_gambar='$fileName' WHERE calo_id=$calo_id";
+        } else {
+            echo "Terjadi kesalahan saat mengupload file.";
+            exit;
+        }
+    } else {
+        // File gambar tidak diupload, tidak perlu memperbarui kolom gambar
+        $sql = "UPDATE calon SET calo_nama='$calo_nama', calo_visi='$calo_visi', calo_misi='$calo_misi' WHERE calo_id=$calo_id";
+    }
+
+    // Eksekusi query
     if ($conn->query($sql) === TRUE) {
         header("Location: ../admin/index.php?page=calon");
         echo "Data updated successfully";
@@ -32,3 +51,4 @@ if (isset($_GET['pese_id'])) {
     }
 }
 $conn->close();
+?>
