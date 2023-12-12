@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Des 2023 pada 19.10
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Generation Time: Nov 28, 2023 at 12:34 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,26 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
---
-
-CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL,
-  `admin_user` varchar(100) NOT NULL,
-  `admin_pass` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `admin`
---
-
-INSERT INTO `admin` (`admin_id`, `admin_user`, `admin_pass`) VALUES
-(1, 'admin', 'admin');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `calon`
+-- Table structure for table `calon`
 --
 
 CREATE TABLE `calon` (
@@ -55,19 +36,18 @@ CREATE TABLE `calon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `calon`
+-- Dumping data for table `calon`
 --
 
 INSERT INTO `calon` (`calo_id`, `calo_nama`, `calo_visi`, `calo_misi`, `calo_gambar`) VALUES
-(1, 'Nijika Ijichi', 'Menjadi pemimpin yang inspiratif dan membangun komunitas yang kuat\r\n', '1. Meningkatkan Kesejahteraan anggota, saya akan berusaha untuk memastikan bahwa setiap anggota angkatan merasa didukung dan dihargai <br>\r\n2. Mendorong Kolaborasi dan Solidaritas, saya akan bekerja keras untuk membangun ikatan yang kuat antara anggota angkatan. Saya akan mengorganisir acara acara sosial dan kegiatan kolaboratif untuk rasa solidaritas di antara kami, seperti kegiatan makrab, kumpulan angkatan rutin, dll<br>\r\n3. Menjaga komunikasi terbuka, Saya akan mendukung komunikasi terbuka antara semua anggota. Saya akan mendengarkan masukan, saran, dan masalah yang dihadapi anggota angkatan, dan berupaya mencari solusi yang memadai<br>\r\n', '1_1702403935.png'),
-(2, 'Ryou Yamada', 'Meningkatkan ketakwaan terhadap Tuhan Yang Maha Esa\r\nMenjadi pemimpin yang sebaik-baiknya dan Meningkatkan sikap solidaritas bagi angkatan teknik komputer 2023\r\n', '1. Merangkul semua teman tanpa membeda bedakan suku, ras, agama dan antargolongan <br>\r\n2. Menampung setiap saran, keluhan, dan bersikap terbuka kepada teman teman <br>\r\n3. Melaksanakan pertemuan angkatan sesuai program yang disetujui teman teman <br>\r\n4. Menjaga nama baik angkatan <br>\r\n', '2_1702403940.png'),
-(3, 'Ikuyo Kita', 'Menjadikan mahasiswa tekkom 23 yang menjunjung solidaritas dan kekeluargaan\r\n', '1. Meningkatkan solidaritas dan kekeluargaan dengan membuat kegiatan di dalam maupun luar kampus <br>\r\n2. Menampung seluruh saran dan kritik yang membangun untuk kemajuan angkatan <br>', '3_1702403944.png'),
-(4, 'Hitori Gotou', 'Membangunkan Badan dari Kasur', 'Dapat Memuaskan diri sendiri', '4_1702403948.png');
+(1, 'Feri Ilham\r\n', 'Menjadi pemimpin yang inspiratif dan membangun komunitas yang kuat\n', '1. Meningkatkan Kesejahteraan anggota, saya akan berusaha untuk memastikan bahwa setiap anggota angkatan merasa didukung dan dihargai <br>\n2. Mendorong Kolaborasi dan Solidaritas, saya akan bekerja keras untuk membangun ikatan yang kuat antara anggota angkatan. Saya akan mengorganisir acara acara sosial dan kegiatan kolaboratif untuk rasa solidaritas di antara kami, seperti kegiatan makrab, kumpulan angkatan rutin, dll<br>\n3. Menjaga komunikasi terbuka, Saya akan mendukung komunikasi terbuka antara semua anggota. Saya akan mendengarkan masukan, saran, dan masalah yang dihadapi anggota angkatan, dan berupaya mencari solusi yang memadai<br>\n', 'feri.jpg'),
+(2, 'Gavel Rizky Atallah', 'Meningkatkan ketakwaan terhadap Tuhan Yang Maha Esa\nMenjadi pemimpin yang sebaik-baiknya dan Meningkatkan sikap solidaritas bagi angkatan teknik komputer 2023\n', '1. Merangkul semua teman tanpa membeda bedakan suku, ras, agama dan antargolongan <br>\n2. Menampung setiap saran, keluhan, dan bersikap terbuka kepada teman teman <br>\n3. Melaksanakan pertemuan angkatan sesuai program yang disetujui teman teman <br>\n4. Menjaga nama baik angkatan <br>\n', 'gavel.jpg'),
+(3, 'R. Muhammad Nadzriel', 'Menjadikan mahasiswa tekkom 23 yang menjunjung solidaritas dan kekeluargaan\n', '1. Meningkatkan solidaritas dan kekeluargaan dengan membuat kegiatan di dalam maupun luar kampus <br>\n2. Menampung seluruh saran dan kritik yang membangun untuk kemajuan angkatan <br>', 'nad.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `peserta`
+-- Table structure for table `peserta`
 --
 
 CREATE TABLE `peserta` (
@@ -80,7 +60,7 @@ CREATE TABLE `peserta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `peserta`
+-- Dumping data for table `peserta`
 --
 
 INSERT INTO `peserta` (`pese_id`, `pese_nim`, `pese_nama`, `pese_nomor`, `pese_email`, `pese_token`) VALUES
@@ -175,13 +155,12 @@ INSERT INTO `peserta` (`pese_id`, `pese_nim`, `pese_nama`, `pese_nomor`, `pese_e
 (93, '2301440', 'Nayla Salsabila', '88218068031', 'naylasalsabila37@upi.edu', '7aqp6'),
 (94, '2304613', 'Arya Wibawa Atmanegara', '87882166935', 'aryawkwk.1502@upi.edu', '6tyky'),
 (95, '2306855', 'Fathan Muhammad Faishal', '85798258274', 'fathanmuhammadf04@upi.edu', 'z9ffm'),
-(96, '2307098', 'Muhammad Azzura Al Karazi', '81386059513', 'akmazzura@upi.edu', 'ihy7v'),
-(97, '2005548', 'Aya Fugunaga', '8238673287', 'mrw@upi.edu', 'm9g28');
+(96, '2307098', 'Muhammad Azzura Al Karazi', '81386059513', 'akmazzura@upi.edu', 'ihy7v');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `peserta_pilih`
+-- Table structure for table `peserta_pilih`
 --
 
 CREATE TABLE `peserta_pilih` (
@@ -191,7 +170,7 @@ CREATE TABLE `peserta_pilih` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `peserta_pilih`
+-- Dumping data for table `peserta_pilih`
 --
 
 INSERT INTO `peserta_pilih` (`pepi_id`, `pepi_pese_nim`, `pepi_calo_id`) VALUES
@@ -202,53 +181,41 @@ INSERT INTO `peserta_pilih` (`pepi_id`, `pepi_pese_nim`, `pepi_calo_id`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`admin_id`);
-
---
--- Indeks untuk tabel `calon`
+-- Indexes for table `calon`
 --
 ALTER TABLE `calon`
   ADD PRIMARY KEY (`calo_id`);
 
 --
--- Indeks untuk tabel `peserta`
+-- Indexes for table `peserta`
 --
 ALTER TABLE `peserta`
   ADD PRIMARY KEY (`pese_id`);
 
 --
--- Indeks untuk tabel `peserta_pilih`
+-- Indexes for table `peserta_pilih`
 --
 ALTER TABLE `peserta_pilih`
   ADD PRIMARY KEY (`pepi_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
---
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `calon`
+-- AUTO_INCREMENT for table `calon`
 --
 ALTER TABLE `calon`
-  MODIFY `calo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `calo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `peserta`
+-- AUTO_INCREMENT for table `peserta`
 --
 ALTER TABLE `peserta`
-  MODIFY `pese_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `pese_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
--- AUTO_INCREMENT untuk tabel `peserta_pilih`
+-- AUTO_INCREMENT for table `peserta_pilih`
 --
 ALTER TABLE `peserta_pilih`
   MODIFY `pepi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
