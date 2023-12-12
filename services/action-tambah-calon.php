@@ -8,13 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $calo_visi = $_POST['addVisi'];
     $calo_misi = $_POST['addMisi'];
 
-    // Folder tempat menyimpan file gambar
+    // Direktori tempat file akan disimpan
     $uploadDir = "../assets/img/";
 
-    // Mendapatkan nama file
-    $fileName = basename($_FILES["addImage"]["name"]);
+    // Mendapatkan ekstensi file
+    $fileExtension = pathinfo($_FILES["addImage"]["name"], PATHINFO_EXTENSION);
 
-    // Menyusun path tempat file akan disimpan
+    // Membuat nama file unik
+    $fileName = $calo_id . "_" . time() . "." . $fileExtension;
     $uploadPath = $uploadDir . $fileName;
 
     // Memindahkan file yang di-upload ke folder tujuan
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $conn->query($query);
 
         if ($result) {
-            header("Location: ../admin/index.php?page=calon&status=success");
+            header("Location: ../../admin/index.php?page=calon&status=success");
         } else {
             echo "Error: " . $conn->error;
         }

@@ -130,8 +130,7 @@ include "../services/koneksi.php";
                                                             <div class="mb-3">
                                                                 <label for="addImage" class="form-label">Image</label>
                                                                 <input type="file" class="form-control" id="editImage"
-                                                                    name="editImage" accept="image/png, image/gif, image/jpeg"
-                                                                    required>
+                                                                    name="editImage" accept="image/png, image/gif, image/jpeg">
                                                             </div>
                                                             <button type="submit" class="btn btn-primary">Update</button>
                                                         </form>

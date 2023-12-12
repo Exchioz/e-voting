@@ -24,11 +24,16 @@ if (isset($_GET['pese_id'])) {
 
     // Direktori tempat file akan disimpan
     $uploadDir = "../assets/img/";
-    $fileName = basename($_FILES["editImage"]["name"]);
-    $uploadPath = $uploadDir . $fileName;
 
     // Cek apakah file gambar diupload
     if ($_FILES['editImage']['error'] == 0) {
+        // Mendapatkan ekstensi file
+        $fileExtension = pathinfo($_FILES["editImage"]["name"], PATHINFO_EXTENSION);
+
+        // Membuat nama file unik
+        $fileName = $calo_id . "_" . time() . "." . $fileExtension;
+        $uploadPath = $uploadDir . $fileName;
+
         // Pertama, dapatkan nama file gambar yang lama
         $query = "SELECT calo_gambar FROM calon WHERE calo_id=$calo_id";
         $result = $conn->query($query);
