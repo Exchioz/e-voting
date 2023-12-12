@@ -29,6 +29,20 @@ if (isset($_GET['pese_id'])) {
 
     // Cek apakah file gambar diupload
     if ($_FILES['editImage']['error'] == 0) {
+        // Pertama, dapatkan nama file gambar yang lama
+        $query = "SELECT calo_gambar FROM calon WHERE calo_id=$calo_id";
+        $result = $conn->query($query);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $oldFileName = $row['calo_gambar'];
+            $oldFilePath = $uploadDir . $oldFileName;
+
+            // Hapus file gambar yang lama jika ada
+            if (file_exists($oldFilePath) && !is_dir($oldFilePath)) {
+                unlink($oldFilePath);
+            }
+        }
+
         // Pindahkan file ke direktori yang dituju
         if(move_uploaded_file($_FILES["editImage"]["tmp_name"], $uploadPath)) {
             // File berhasil diupload, perbarui database dengan nama file baru
