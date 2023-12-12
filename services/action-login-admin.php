@@ -21,13 +21,13 @@ if ($result->num_rows == 1) {
         $_SESSION['admin_user'] = $row['admin_user'];
 
         // Redirect ke halaman setelah login berhasil
-        header("Location: ../admin/hasil.php");
+        header("Location: ../admin/index.php");
     } else {
         // Jika password salah, kembalikan ke halaman login dengan pesan error
-        header("Location: ../admin/login.php?error=Token salah");
+        header("Location: ../admin/login.php?error=Salah Password");
     }
 } else {
     // Jika nim tidak ditemukan, kembalikan ke halaman login dengan pesan error
-    header("Location: ../admin/login.php?error=NIM tidak ditemukan");
+    header("Location: ../admin/login.php?error=Username tidak ditemukan");
 }
 $conn->close();

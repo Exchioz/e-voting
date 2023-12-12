@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($query);
 
     if ($result) {
-        header("Location: ../../admin/peserta.php");
+        header("Location: ../../admin/index.php?page=peserta&status=success");
     } else {
         echo "Error: " . $conn->error;
     }

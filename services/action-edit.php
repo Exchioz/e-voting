@@ -11,7 +11,7 @@ if (isset($_GET['pese_id'])) {
     $sql = "UPDATE peserta SET pese_nim='$pese_nim', pese_nama='$pese_nama', pese_nomor='$pese_nomor', pese_email='$pese_email' WHERE pese_id=$pese_id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../admin/peserta.php");
+        header("Location: ../admin/index.php?page=peserta");
         echo "Data updated successfully";
     } else {
         echo "Error updating data: " . $conn->error;
@@ -25,7 +25,7 @@ if (isset($_GET['pese_id'])) {
     $sql = "UPDATE calon SET calo_id='$calo_id', calo_nama='$calo_nama', calo_visi='$calo_visi', calo_misi='$calo_misi' WHERE calo_id=$calo_id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../admin/calon.php");
+        header("Location: ../admin/index.php?page=calon");
         echo "Data updated successfully";
     } else {
         echo "Error updating data: " . $conn->error;

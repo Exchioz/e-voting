@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     move_uploaded_file($uploadedFile, $uploadPath);
 
     if ($result) {
-        header("Location: ../../admin/calon.php");
+        header("Location: ../../admin/index.php?page=calon&status=success");
     } else {
         echo "Error: " . $conn->error;
     }

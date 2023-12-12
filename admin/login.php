@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// Fungsi untuk memeriksa apakah pengguna sudah login
+function isUserLoggedIn() {
+    // Sesuaikan dengan logika otentikasi Anda
+    return isset($_SESSION['admin_id']);
+}
+
+// Jika pengguna sudah login, redirect ke halaman dashboard
+if (isUserLoggedIn()) {
+    header("Location: index.php");
+    exit();
+}
+?>
 <html lang="en">
 
 <head>

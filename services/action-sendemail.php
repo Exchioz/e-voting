@@ -12,8 +12,8 @@ require 'mailer/src/SMTP.php';
 
 include 'koneksi.php';
 
-if (isset($_GET['id'])) {
-    $pese_id = $_GET['id'];
+if (isset($_GET['pese_id'])) {
+    $pese_id = $_GET['pese_id'];
     $sql = "SELECT * FROM peserta WHERE pese_id = $pese_id";
 } else {
     $sql = "SELECT * FROM peserta";
