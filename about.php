@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+include 'services/koneksi.php';
+if (!isset($_SESSION['nim'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <html lang="en">
 
 <head>
@@ -7,6 +17,9 @@
 </head>
 
 <body>
+    <?php
+    require_once "navbar.php";
+    ?>
     <div class="container mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-6 col-sm-5">
