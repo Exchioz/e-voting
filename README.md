@@ -1,5 +1,5 @@
 # e-voting
-Tugas Akhir Pemrograman Web
+Election Website Uses Native PHP
 
 # Update TODO LIST
 - Login
