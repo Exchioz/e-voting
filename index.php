@@ -128,10 +128,6 @@ require_once "navbar.php";
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalpilih<?php echo $row['calo_id'] ?>">Pilih</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

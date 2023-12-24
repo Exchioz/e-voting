@@ -1,3 +1,28 @@
+<style>
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        /* Untuk memastikan navbar tetap di atas elemen lain */
+    }
+
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        margin-right: auto;
+        /* Menggeser elemen ke kiri */
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+        /* Menggeser elemen ke kanan */
+    }
+</style>
+
 <nav class="navbar bg-primary sticky-top navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
         <div class="collapse navbar-collapse position-absolute top-50 start-50 translate-middle" id="navbarText">
