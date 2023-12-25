@@ -20,22 +20,22 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 // Memuat file konten sesuai dengan nilai 'page'
 switch ($page) {
     case 'dashboard':
-        $content = 'dashboard.php';
+        $content = './content/dashboard.php';
         break;
     case 'peserta':
-        $content = 'peserta.php';
+        $content = './content/peserta.php';
         break;
     case 'calon':
-        $content = 'calon.php';
+        $content = './content/calon.php';
         break;
     case 'hasil':
-        $content = 'hasil.php';
+        $content = './content/hasil.php';
         break;
     case 'logout':
         $content = '../services/action-logout.php';
         break;
     default:
-        $content = '404.php'; // Halaman tidak ditemukan
+        $content = './content/404.php'; // Halaman tidak ditemukan
         break;
 }
 

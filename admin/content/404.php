@@ -1,4 +1,10 @@
-
+<?php
+if (!isset($_GET['page'])) {
+    // Jika pengguna belum login, redirect ke halaman login atau tampilkan pesan
+    header("Location: ../login.php");
+    exit();
+}
+?>
         <div id="layoutError">
             <div id="layoutError_content">
                 <main>

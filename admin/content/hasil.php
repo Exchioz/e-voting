@@ -1,5 +1,10 @@
 <?php
 include("../services/koneksi.php");
+if (!isset($_GET['page'])) {
+    // Jika pengguna belum login, redirect ke halaman login atau tampilkan pesan
+    header("Location: ../login.php");
+    exit();
+}
 ?>
 <head>
     <meta charset="UTF-8">

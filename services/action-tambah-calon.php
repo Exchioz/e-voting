@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $conn->query($query);
 
         if ($result) {
-            header("Location: ../../admin/index.php?page=calon&status=success");
+            header("Location: ../admin/index.php?page=calon&status=success");
         } else {
             echo "Error: " . $conn->error;
         }
