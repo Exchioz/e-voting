@@ -9,10 +9,10 @@ require_once "navbar.php";
             <div class="intro-text">
                 <div class="container">
                     <div class="heading text-white" data-aos="fade-up">
-                        <h1>Another cool free template by the fine folks at colorlib</h1>
+                        <h1>E-Voting Pemilihan Kandidat Ketua </h1>
                     </div>
                     <div class="excerpt text-center text-white" data-aos="fade-up" data-aos-delay="100">
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live.</p>
+                        <p>Selamat datang di sistem informasi e-voting teknik komputer</p>
                     </div>
                     <div class="align-items-center justify-content-center d-flex">
                         <button class="btn btn-outline-light btn-lg fw-bold mt-4" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
