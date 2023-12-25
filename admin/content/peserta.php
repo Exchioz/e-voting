@@ -15,9 +15,9 @@ if (!isset($_GET['page'])) {
         <div class="col-md-10">
             <div class="card">
                 <div class="card-body m-3">
-                    <a type="button" href="../services/action-sendemail.php" class="btn btn-primary">Send Email</a>
+                    <a type="button" href="../services/action-sendemail.php" class="btn btn-success"><i class="fa-solid fa-paper-plane me-2"></i>Send All Email</a>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#tambahModal">Tambah</button>
+                        data-bs-target="#tambahModal"><i class="fa-solid fa-user-plus me-2"></i>Tambah</button>
 
                     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel"
                         aria-hidden="true">
@@ -84,11 +84,11 @@ if (!isset($_GET['page'])) {
                                             </td>
                                             <td class="text-center">
                                                 <a href='../services/action-sendemail.php?pese_id=<?php echo $row['pese_id']; ?>'
-                                                    class='btn btn-success mx-1'>Send</a>
+                                                    class='btn btn-success mx-1'><i class="fa-solid fa-paper-plane me-2"></i>Send</a>
                                                 <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal"
-                                                    data-bs-target="#editModal<?php echo $row['pese_id']; ?>">Edit</button>
+                                                    data-bs-target="#editModal<?php echo $row['pese_id']; ?>"><i class="fa-solid fa-pencil me-2"></i>Edit</button>
                                                 <a href='../services/action-delete.php?pese_id=<?php echo $row['pese_id']; ?>'
-                                                    class='btn btn-danger mx-1'>Hapus</a>
+                                                    class='btn btn-danger mx-1'><i class="fa-solid fa-trash me-2"></i>Hapus</a>
                                             </td>
                                         </tr>
                                         <?php
