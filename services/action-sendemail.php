@@ -69,7 +69,9 @@ if ($result->num_rows > 0) {
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
+        header("Location: ../admin/index.php?page=peserta&status=success");
     }
 } else {
     echo "tidak ada calon!";
+    header("Location: ../admin/index.php?page=peserta&status=success");
 }
