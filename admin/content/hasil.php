@@ -42,31 +42,7 @@ $jumlahBelumMemilih = getJumlahBelumMemilih($conn);
             <div class="justify-content-center text-center">
                 <h2 class="mb-5">Hasil Suara</h2>
             </div>
-            
-        <div class="row">
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-success text-white mb-4">
-                    <div class="card-body">Suara Masuk - <big>
-                            <?php echo $jumlahSuaraMasuk; ?>
-                        </big></div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="?page=hasil">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-danger text-white mb-4">
-                    <div class="card-body">Belum Memilih - <big>
-                            <?php echo $jumlahBelumMemilih; ?>
-                        </big></div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="?page=hasil">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
             <div class="row gutter-v1">
                 <?php
                 $sql = "SELECT * FROM calon;";
@@ -79,7 +55,7 @@ $jumlahBelumMemilih = getJumlahBelumMemilih($conn);
                         $countRow = $countResult->fetch_assoc();
                         $jumlahSuara = $countRow['jumlah_suara'];
                 ?>
-                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center my-4">
                             <div class="cardview h-100 d-flex flex-column justify-content-between">
                                 <div class="image-container text-center">
                                     <img src="../assets/img/<?php echo $row['calo_gambar'] ?>" alt="Image" class="rounded-top img-fluid">

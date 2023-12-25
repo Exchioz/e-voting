@@ -163,8 +163,6 @@ if (!isset($_GET['page'])) {
                                         </div>
                                         <?php
                                     }
-                                } else {
-                                    echo "<tr><td colspan='5'>No data found</td></tr>";
                                 }
                                 mysqli_close($conn);
                                 ?>

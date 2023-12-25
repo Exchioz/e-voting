@@ -1,9 +1,9 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.php">E-Voting</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
+    <!-- Navbar Brand-->
+    <a class="navbar-brand px-3" href="index.php">E-Voting</a>
     <!-- Navbar Search-->
     <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
     </div>
@@ -12,7 +12,7 @@
         <li class="nav-item">
             <a class="nav-link"  href="#" role="button"
                 aria-expanded="false">
-                <i class="fas fa-user fa-fw"></i> <?="Asep Supriyadi";?>
+                <i class="fas fa-tachometer-alt"></i> Logout
             </a>
         </li>
     </ul>
@@ -39,11 +39,6 @@
                     <a class="nav-link" href="?page=hasil">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Hasil
-                    </a>
-                    <div class="sb-sidenav-menu-heading">Pengaturan</div>
-                    <a class="nav-link" href="?page=logout">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Logout
                     </a>
                 </div>
             </div>
