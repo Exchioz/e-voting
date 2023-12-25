@@ -10,9 +10,9 @@
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item">
-            <a class="nav-link"  href="#" role="button"
+            <a class="nav-link"  href="?page=logout" role="button"
                 aria-expanded="false">
-                <i class="fas fa-tachometer-alt"></i> Logout
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
             </a>
         </li>
     </ul>
@@ -24,20 +24,20 @@
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Main</div>
                     <a class="nav-link" href="?">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                         Dashboard
                     </a>
                     <div class="sb-sidenav-menu-heading">Data</div>
                     <a class="nav-link" href="?page=peserta">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></i></div>
                         Peserta
                     </a>
                     <a class="nav-link" href="?page=calon">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-gavel"></i></div>
                         Calon
                     </a>
                     <a class="nav-link" href="?page=hasil">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-chart-simple"></i></div>
                         Hasil
                     </a>
                 </div>
