@@ -1,11 +1,6 @@
 <?php
 
 include("../services/koneksi.php");
-if (!isset($_GET['page'])) {
-    // Jika pengguna belum login, redirect ke halaman login atau tampilkan pesan
-    header("Location: ../login.php");
-    exit();
-}
 // Fungsi untuk mendapatkan data pemilih baru
 function getPemilihBaru($conn, $limit = 3)
 {
