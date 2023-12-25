@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if (isset($_SESSION['nim'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
 <html lang="en">
 
 <head>
@@ -13,6 +21,12 @@
 
 <body>
     <section class="d-flex justify-content-center align-items-center min-vh-100">
+    <?php
+    if (isset($_GET['error'])) {
+        $errorMessage = htmlspecialchars($_GET['error']);
+        echo "<script>alert('Error: $errorMessage');</script>";
+    }
+    ?>
         <div class="container custom-container text-center text-lg-start">
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
