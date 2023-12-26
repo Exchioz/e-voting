@@ -2,6 +2,13 @@
 require_once "header.php";
 require_once "navbar.php";
 ?>
+<head>
+     <style>
+        .image-container {
+            margin-top: 20px; /* Sesuaikan nilai margin sesuai kebutuhan Anda */
+        }
+    </style>
+</head>
 <body>
     <section id="about" class="d-flex justify-content-center align-items-center min-vh-100">
         <div class="container">
@@ -10,7 +17,7 @@ require_once "navbar.php";
                     <div class="about-card mb-3">
                         <div class="row g-0">
                             <div class="image-container text-center col-md-4">
-                                <img src="/assets/img/ivan.jpg" class="rounded-start img-fluid" alt="...">
+                                <img src="./assets/img/rad.jpg" class="rounded-start img-fluid" alt="...">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
                                 <div class="card-body p-4">
@@ -30,7 +37,7 @@ require_once "navbar.php";
                     <div class="about-card mb-3">
                         <div class="row g-0">
                             <div class="image-container text-center col-md-4">
-                                <img src="./assets/img/azka.png" class="rounded-top img-fluid" alt="...">
+                                <img src="./assets/img/azk.jpg" class="rounded-top img-fluid" alt="...">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
                                 <div class="card-body p-4">
@@ -48,7 +55,7 @@ require_once "navbar.php";
                     <div class="about-card mb-3">
                         <div class="row g-0">
                             <div class="image-container text-center col-md-4">
-                                <img src="./assets/img/aksyal.png" class="rounded-start img-fluid" alt="...">
+                                <img src="./assets/img/syal.jpg" class="rounded-start img-fluid" alt="...">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
                                 <div class="card-body p-4">
@@ -69,7 +76,7 @@ require_once "navbar.php";
                     <div class="about-card mb-3">
                         <div class="row g-0">
                             <div class="image-container text-center col-md-4">
-                                <img src="./assets/img/ivan.jpg" class="rounded-start img-fluid" alt="...">
+                                <img src="./assets/img/ivannn.jpg" class="rounded-start img-fluid" alt="...">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
                                 <div class="card-body p-4">
@@ -87,7 +94,7 @@ require_once "navbar.php";
                     <div class="about-card mb-3">
                         <div class="row g-0">
                             <div class="image-container text-center col-md-4">
-                                <img src="./assets/img/haryanto.png" class="rounded-start img-fluid" alt="...">
+                                <img src="./assets/img/har.jpg" class="rounded-start img-fluid" alt="...">
                             </div>
                             <div class="col-md-8 d-flex align-items-center">
                                 <div class="card-body p-4">
