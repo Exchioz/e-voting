@@ -7,6 +7,12 @@ if (!isset($_GET['page'])) {
 }
 ?>
 
+<?php
+    if (isset($_GET['error'])) {
+        $errorMessage = htmlspecialchars($_GET['error']);
+        echo "<script>alert('Error: $errorMessage');</script>";
+    }
+?>
 <div class="container-fluid mt-5">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8 p-3">

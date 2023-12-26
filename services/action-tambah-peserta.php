@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result_check_nim->num_rows > 0) {
         // Jika NIM sudah ada, berikan pesan error atau arahkan kembali ke halaman sebelumnya
-        header("Location: ../admin/index.php?page=peserta&status=error&message=NIM sudah ada");
+        header("Location: ../admin/index.php?page=peserta&error=NIM sudah terdaftar");
         exit();
     } else {
         $query = "INSERT INTO peserta (pese_nim, pese_nama, pese_nomor, pese_email, pese_token) VALUES ('$pese_nim', '$pese_nama', '$pese_nomor', '$pese_email', '$pese_token')";

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result_check_calo_id = $conn->query($query_check_calo_id);
 
     if ($result_check_calo_id->num_rows > 0) {
-        header("Location: ../admin/index.php?page=calon&status=error&message=No. Urut sudah ada");
+        header("Location: ../admin/index.php?page=calon&error=No. Urut sudah terdaftar");
         exit();
     }
 
