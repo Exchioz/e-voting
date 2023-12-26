@@ -8,19 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $calo_visi = $_POST['addVisi'];
     $calo_misi = $_POST['addMisi'];
 
-    // Direktori tempat file akan disimpan
     $uploadDir = "../assets/img/";
 
-    // Mendapatkan ekstensi file
     $fileExtension = pathinfo($_FILES["addImage"]["name"], PATHINFO_EXTENSION);
 
-    // Membuat nama file unik
     $fileName = $calo_id . "_" . time() . "." . $fileExtension;
     $uploadPath = $uploadDir . $fileName;
 
-    // Memindahkan file yang di-upload ke folder tujuan
+    $query_check_calo_id = "SELECT * FROM calon WHERE calo_id = '$calo_id'";
+    $result_check_calo_id = $conn->query($query_check_calo_id);
+
+    if ($result_check_calo_id->num_rows > 0) {
+        header("Location: ../admin/index.php?page=calon&status=error&message=No. Urut sudah ada");
+        exit();
+    }
+
     if(move_uploaded_file($_FILES["addImage"]["tmp_name"], $uploadPath)) {
-        // Menyusun query untuk memasukkan data ke dalam database
         $query = "INSERT INTO calon (calo_id, calo_nama, calo_visi, calo_misi, calo_gambar) VALUES ('$calo_id', '$calo_nama', '$calo_visi', '$calo_misi', '$fileName')";
         
         $result = $conn->query($query);

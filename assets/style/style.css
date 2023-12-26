@@ -134,6 +134,17 @@
 	color: black;
 }
 
+.about-card{
+	border: 1px solid #e0e0e0;
+    border-radius: 8px;
+	height: auto;
+}
+
+.rounded-img {
+	width: 100%; /* Lebar gambar 100% dari lebar parent */
+	height: 100%; /* Tinggi gambar 100% dari tinggi parent */
+	object-fit: cover; /* Menggunakan object-fit untuk crop gambar */
+}
 
 .cardview {
   border: none;
