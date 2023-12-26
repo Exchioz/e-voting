@@ -9,10 +9,10 @@ require_once "navbar.php";
             <div class="intro-text">
                 <div class="container">
                     <div class="heading text-white" data-aos="fade-up">
-                        <h1>E-Voting Pemilihan Kandidat Ketua </h1>
+                        <h1>E-Voting</h1>
                     </div>
                     <div class="excerpt text-center text-white" data-aos="fade-up" data-aos-delay="100">
-                        <p>Selamat datang di sistem informasi e-voting teknik komputer</p>
+                        <p>Selamat datang di E-Voting, platform pemilihan online yang cepat, aman, dan efisien!<br>Pilih kandidat pilihan Anda sekarang dan berkontribusi dalam membentuk masa depan. <br>Demokrasi lebih mudah dengan E-Voting – gunakan hak pilih Anda secara digital!</p>
                     </div>
                     <div class="align-items-center justify-content-center d-flex">
                         <button class="btn btn-outline-light btn-lg fw-bold mt-4" onclick="scrollToSection('pemilihan')" type="button">Vote Sekarang!</button>
@@ -47,11 +47,12 @@ require_once "navbar.php";
                                 //Hitung persentase pemilih
                                 $persentasePemilih = intval(($totalPemilih / $totalSuara) * 100);
                                 ?>
+
                                 <div class="col-lg-4 text-center">
                                     <span class="counter">
                                         <span class="counterpersen" data-target="<?php echo $persentasePemilih; ?>"><?php echo $persentasePemilih; ?></span>
                                     </span>
-                                    <span class="d-block">Orang</span>
+                                    <span class="d-block">Persentase Pemilih</span>
                                 </div>
                                 <div class="col-lg-4 text-center">
                                     <span class="counter">
