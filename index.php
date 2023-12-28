@@ -79,14 +79,14 @@ require_once "navbar.php";
             <div class="justify-content-center text-center">
                 <h2 class="mb-5">Pilih Calonmu!</h2>
             </div>
-            <div class="row gutter-v1">
-                <?php
+            <div class="row gutter-v1 justify-content-center text-center">
+            <?php
                 $sql = "SELECT * FROM calon;";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                 ?>
-                        <div class="col-md-4 d-flex justify-content-center align-items-center my-4">
+                         <div class="col-md-4 d-flex justify-content-center align-items-center my-4">
                             <div class="card h-100 d-flex flex-column justify-content-between">
                                 <div class="image-container text-center">
                                     <img src="./assets/img/<?php echo $row['calo_gambar'] ?>" alt="Image" class="rounded-top img-fluid">
